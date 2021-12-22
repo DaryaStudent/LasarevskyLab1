@@ -5,6 +5,7 @@
     (let [channel (chan 10)]
         (go
             (doseq [x vec]
+                (Thread/sleep 1000)
                 (>! channel x))
             (close! channel))
         channel))
