@@ -11,5 +11,5 @@
                         (/ (reduce + (map #(Math/pow (- avg %) 2) subarr)) n)
                         (sliding-dispersion (rest arr) n)))))))
 
-(sliding-dispersion '(2 5 2 1 3 5 0) 3)
-(take 10 (sliding-dispersion (cycle '(0 1 2)) 3)) ;<- тест на бесконечность
+(println (sliding-dispersion '(2 5 2 1 3 5 0) 3))
+(println take 10 (sliding-dispersion (cycle '(0 1 2)) 3))) ;<- тест на бесконечность
